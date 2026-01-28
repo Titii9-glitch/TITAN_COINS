@@ -1,0 +1,10 @@
+# Herramientas y temporales
+SP_Flash_Tool_v5.1924_Win/
+WSA_2407.40000.4.0_x64/
+ePSXe/
+desktop.ini
+*.tmp
+
+# Si usas Python para tu bot
+__pycache__/
+*.pyc
