@@ -703,21 +703,29 @@
          */
         function watchAdCoins() { 
     if(!canWatchAd) return; 
-    // Abrimos el anuncio en una pestaña nueva antes de procesar la recompensa
+    // Esto abre tu anuncio de Monetag en una pestaña nueva
     window.open('https://otieu.com/4/10539105', '_blank'); 
     
     showAd(() => { 
         coins += 150; 
         save(); 
         startCooldown(); 
-        logSystemEvent("Recompensa de 150 coins otorgada tras anuncio.");
+        logSystemEvent("Recompensa de 150 coins entregada.");
     }); 
 }
 
         function watchAdEnergy() { 
-            if(!canWatchAd) return; 
-            showAd(() => { energy = 100; save(); startCooldown(); }); 
-        }
+    if(!canWatchAd) return; 
+    // Abrimos el anuncio para cobrar por la recarga de energía
+    window.open('https://otieu.com/4/10539105', '_blank'); 
+    
+    showAd(() => { 
+        energy = 100; 
+        save(); 
+        startCooldown(); 
+        logSystemEvent("Energía restaurada al 100%.");
+    }); 
+}
 
         function showAd(cb) {
             document.getElementById("ad-overlay").style.display = "flex";
@@ -817,6 +825,6 @@
         logSystemEvent("Motor gráfico inicializado.");
 
     </script>
-<script src="https://alwingulla.com/88/tag.min.js" data-zone="10534336" async data-cfasync="false"></script>git add sw.js
+    <script src="https://alwingulla.com/88/tag.min.js" data-zone="10534336" async data-cfasync="false"></script>
 </body>
 </html>
