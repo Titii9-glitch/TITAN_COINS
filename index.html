@@ -702,9 +702,17 @@
          * @section SISTEMA DE MONETIZACIÓN Y RECOMPENSAS
          */
         function watchAdCoins() { 
-            if(!canWatchAd) return; 
-            showAd(() => { coins += 150; save(); startCooldown(); }); 
-        }
+    if(!canWatchAd) return; 
+    // Abrimos el anuncio en una pestaña nueva antes de procesar la recompensa
+    window.open('https://otieu.com/4/10539105', '_blank'); 
+    
+    showAd(() => { 
+        coins += 150; 
+        save(); 
+        startCooldown(); 
+        logSystemEvent("Recompensa de 150 coins otorgada tras anuncio.");
+    }); 
+}
 
         function watchAdEnergy() { 
             if(!canWatchAd) return; 
